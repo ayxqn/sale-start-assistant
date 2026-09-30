@@ -2,6 +2,8 @@ build/
 dist/
 output/
 .private/
+dependencies/
+test-dependencies/
 local.properties
 *.jks
 *.keystore
