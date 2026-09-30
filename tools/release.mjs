@@ -16,7 +16,7 @@ const credentials=Object.fromEntries(raw.split(/\r?\n/).map(l=>{const i=l.indexO
 if(!credentials.password)throw Error('Existing GitHub credential unavailable.');
 async function request(url,method='GET',body,type='application/json'){
  const u=new URL(url);if(u.protocol!=='https:'||!['api.github.com','uploads.github.com'].includes(u.hostname)||!u.pathname.startsWith('/repos/'+repo+'/'))throw Error('Unexpected publication destination');
- const r=await fetch(url,{method,redirect:'error',signal:AbortSignal.timeout(60000),headers:{Authorization:'Bearer '+credentials.password,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'SaleStartAssistantRelease',...(body?{'Content-Type':type}:{})},body:body?(type==='application/json'?JSON.stringify(body):body):undefined});
+ const r=await fetch(url,{method,redirect:'error',signal:AbortSignal.timeout(type==='application/json'?60000:600000),headers:{Authorization:'Bearer '+credentials.password,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'SaleStartAssistantRelease',...(body?{'Content-Type':type}:{})},body:body?(type==='application/json'?JSON.stringify(body):body):undefined});
  if(!r.ok)throw Error('GitHub request failed, HTTP '+r.status);return r.json();
 }
 const base='https://api.github.com/repos/'+repo;
