@@ -1,5 +1,7 @@
 # 从旧脚本到安卓应用
 
+[项目首页](../README.md) · [文档导航](README.md) · [安装与下载](DOWNLOADS.md)
+
 ## 第一步 确认需求和边界
 
 先说清楚程序要替用户做哪一步，再动手写代码。本项目只负责倒计时和进入官方页。下单、付款和验证留在官方 App。这样不需要处理账号密码，也不用维护不稳定的内部购买接口。软件是 Android APK，不是微信小程序，不兼容 iOS。
@@ -33,6 +35,15 @@ MainActivity 管界面和前台流程；SalePolicy 管链接、时间和时钟�
 开发环境使用 Windows 10/11、PowerShell 7、JDK 17 或 21、官方 Android Platform 35 与 Build Tools 35.0.0。下载官方工具并按官方包元数据核验，遵守它们自己的许可。SDK 尽量放在纯英文路径。
 
 tools/build.ps1 会先测试，再编译资源和 Java 源码，生成 dex，打包、对齐、签名，最后验证签名并输出 SHA256SUMS.txt。没有联网运行库或隐藏的账号文件要手工复制。构建结果在 dist，构建中间文件在 build。
+
+开发者可用以下命令构建；普通用户不要执行这些工具，下载 APK 即可。SDK、JDK 路径请换成自己电脑上的实际位置。
+
+```powershell
+pwsh -NoProfile -File tools/build.ps1 -BuildTools D:/AndroidSDK/build-tools/35.0.0 -AndroidJar D:/AndroidSDK/platforms/android-35/android.jar -Jdk D:/Java/jdk-21
+node tools/privacy-check.mjs
+```
+
+可选的 `tools/make-manual.py` 从仓库说明生成 PDF，需 Python、ReportLab 和 Windows 宋体字体；这一步不影响 APK 构建或用户使用。
 
 首次构建会在当前用户的 AppData/Local/SaleStartAssistantSigning 创建签名私钥和 password.dpapi。密码受 Windows 当前用户保护，目录只授权当前用户和 SYSTEM。别上传这两个文件。更换 Windows 账号或重装后，DPAPI 文件可能不能解密；应另做受控的离线备份和密钥恢复方案，密码不得写进代码或公开仓库。相同包名的更新必须使用原签名，否则不能直接覆盖安装。密钥丢失或泄露时，暂停发布并评估换包名或应用商店签名恢复，而不是随便覆盖密钥。
 
