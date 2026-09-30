@@ -2,13 +2,15 @@
 
 [项目首页](../README.md) · [文档导航](README.md) · [使用手册](USER_GUIDE.md) · [安全核实说明](SAFETY.md)
 
-## 只想用 App，下载这一个
+**当前 APK 不包含旧 V2.4 的接口抢购流程，不是用户要求的完整功能版本。下载前先看 [旧版功能对照](LEGACY_COMPARISON.md)。完整功能目标尚未完成，不把本版作为该目标的最终安装包交付。**
+
+## 只想用当前进场 App，下载这一个
 
 **[sale-start-assistant-1.0.0.apk](https://github.com/ayxqn/sale-start-assistant/releases/download/v1.0.0/sale-start-assistant-1.0.0.apk)**
 
 这是 1.0.0 内测版的安卓安装包，支持 Android 8.0 及以上。下载、安装后独立运行，不需要电脑、USB、ADB、Python、SDK、服务器、源码或外部配置文件，也不用 AutoJs6、Root、无障碍服务或截图权限。
 
-本仓库当前为私有，需要获授权的 GitHub 账号才能访问下载链接。看到 404 或无法下载时，不能据此判断手机不兼容；先确认是否有仓库访问权限。
+仓库与发布页公开可访问，正常下载不需要仓库授权或 GitHub 登录。若链接无法打开，先检查网络和准确文件名，不要转而安装来源不明的同名文件。
 
 iPhone、iPad 和 iOS 不能安装。B 站国际版、HD 版、其他购物平台和不同手机系统的实际跳转没有完成验证，不承诺兼容。
 

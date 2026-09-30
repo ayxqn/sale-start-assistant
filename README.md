@@ -1,5 +1,7 @@
 # 开售助手
 
+**功能核对：当前 1.0.0 APK 是倒计时与官方页面跳转版本，没有旧 V2.4 的账号会话读取、服务端校时、自动创建订单或条件重试。它不是旧抢购流程的等价交付；完整目标仍待恢复。详见 [旧版功能对照](docs/LEGACY_COMPARISON.md)。**
+
 给 B 站官方活动页设置开售时间，在前台倒计时，到点打开官方活动页。登录、下单、核对金额和付款仍由你在官方 App 内完成。
 
 **Android 8.0 及以上 · 1.0.0 内测版 · 原生 Java · MIT 许可**
@@ -10,7 +12,7 @@
 
 普通安卓用户只需下载 **[sale-start-assistant-1.0.0.apk](https://github.com/ayxqn/sale-start-assistant/releases/download/v1.0.0/sale-start-assistant-1.0.0.apk)** 并安装。安装后独立运行，不需要电脑、Python、ADB、SDK、服务器、配置文件、AutoJs6、Root 或无障碍服务。
 
-仓库目前仍为私有，下载链接仅对获授权账号开放。尚未公开供所有人下载。
+仓库源码与 1.0.0 内测发布文件公开可访问。源码采用 MIT 许可；公开不代表功能已恢复或手机验收已完成。
 
 | 文件 | 适合谁 | 下载 |
 | --- | --- | --- |
@@ -66,6 +68,7 @@
 | 了解权限、联网、数据保存和安全检查 | [安全与隐私核实说明](docs/SAFETY.md)、[隐私政策](docs/PRIVACY.md) |
 | 找代码、测试、工具和文件用途 | [文档与文件导航](docs/README.md) |
 | 学习开发步骤或自己构建 APK | [开发与发布](docs/DEVELOPMENT.md) |
+| 核对旧版抢购流程是否包含在当前 APK 中 | [旧版功能对照](docs/LEGACY_COMPARISON.md) |
 | 核对版本变化和许可 | [版本记录](CHANGELOG.md)、[MIT 许可证](LICENSE) |
 
 ## 给开发者

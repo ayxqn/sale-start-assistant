@@ -10,6 +10,7 @@
 | --- | --- |
 | 下载并使用 | [安装与下载](DOWNLOADS.md) → [使用手册](USER_GUIDE.md) |
 | 确认隐私与安全 | [安全核实说明](SAFETY.md) → [隐私政策](PRIVACY.md) → [安全说明](../SECURITY.md) |
+| 核对旧版抢购功能和当前 APK 的差异 | [旧版功能对照](LEGACY_COMPARISON.md) |
 | 看测试是否足够 | [测试与验收](TESTING.md) |
 | 学习开发或自行构建 | [开发与发布](DEVELOPMENT.md) → [版本记录](../CHANGELOG.md) → [MIT 许可证](../LICENSE) |
 
